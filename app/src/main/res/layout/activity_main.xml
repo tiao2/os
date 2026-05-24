@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_bg"
+    android:padding="16dp">
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView android:id="@+id/tv_frequency_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="440 Hz"
+            android:textSize="48sp"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center"
+            android:textStyle="bold"/>
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="频率 (Hz)"
+            android:textColor="#AAAAAA"
+            android:layout_marginTop="16dp"/>
+        <SeekBar android:id="@+id/seekbar_frequency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="20000"
+            android:progress="440"/>
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="音量"
+            android:textColor="#AAAAAA"
+            android:layout_marginTop="24dp"/>
+        <SeekBar android:id="@+id/seekbar_volume"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="80"/>
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="波形"
+            android:textColor="#AAAAAA"
+            android:layout_marginTop="24dp"/>
+        <GridLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2">
+            <Button android:id="@+id/btn_sine" android:text="正弦波" android:tag="0" style="@style/WaveButton"/>
+            <Button android:id="@+id/btn_square" android:text="方波" android:tag="1" style="@style/WaveButton"/>
+            <Button android:id="@+id/btn_triangle" android:text="三角波" android:tag="2" style="@style/WaveButton"/>
+            <Button android:id="@+id/btn_sawtooth" android:text="锯齿波" android:tag="3" style="@style/WaveButton"/>
+        </GridLayout>
+        <Button android:id="@+id/btn_custom_waveform"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="@string/custom_waveform"
+            android:layout_marginTop="16dp"
+            style="@style/SecondaryButton"/>
+        <Button android:id="@+id/btn_play_stop"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="@string/start"
+            android:layout_marginTop="16dp"
+            style="@style/PrimaryButton"/>
+    </LinearLayout>
+</ScrollView>

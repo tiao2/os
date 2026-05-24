@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Oscillator</string>
+    <string name="frequency">频率 (Hz)</string>
+    <string name="volume">音量</string>
+    <string name="start">开始播放</string>
+    <string name="stop">停止播放</string>
+    <string name="sine">正弦波</string>
+    <string name="square">方波</string>
+    <string name="triangle">三角波</string>
+    <string name="sawtooth">锯齿波</string>
+    <string name="custom_waveform">自定义波形</string>
+    <string name="save">保存</string>
+    <string name="cancel">取消</string>
+    <string name="add_harmonic">新建谐波</string>
+</resources>
