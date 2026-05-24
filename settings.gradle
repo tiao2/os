@@ -1,0 +1,2 @@
+rootProject.name = "OscillatorApp"
+include ':app'

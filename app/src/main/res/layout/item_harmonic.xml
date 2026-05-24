@@ -5,23 +5,31 @@
     android:orientation="horizontal"
     android:paddingVertical="8dp"
     android:gravity="center_vertical">
-    <TextView android:id="@+id/tv_harmonic_order"
+
+    <TextView
+        android:id="@+id/tv_harmonic_order"
         android:layout_width="60dp"
         android:layout_height="wrap_content"
         android:text="3次谐波"
         android:textColor="#FFFFFF"/>
-    <SeekBar android:id="@+id/sb_harmonic_amp"
+
+    <SeekBar
+        android:id="@+id/sb_harmonic_amp"
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="wrap_content"
         android:max="100"/>
-    <TextView android:id="@+id/tv_harmonic_amp_value"
+
+    <TextView
+        android:id="@+id/tv_harmonic_amp_value"
         android:layout_width="40dp"
         android:layout_height="wrap_content"
         android:text="0%"
         android:textColor="#CCCCCC"
         android:gravity="end"/>
-    <ImageButton android:id="@+id/btn_delete_harmonic"
+
+    <ImageButton
+        android:id="@+id/btn_delete_harmonic"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:src="@android:drawable/ic_menu_delete"

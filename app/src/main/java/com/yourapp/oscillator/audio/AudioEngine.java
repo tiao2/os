@@ -74,7 +74,7 @@ public class AudioEngine {
 
     public void setCustomHarmonics(double[] amps) {
         generator.setCustomHarmonics(amps);
-        generator.setWaveformType(4);
+        generator.setWaveformType(4); // 切换到自定义模式
         this.waveformType = 4;
     }
 

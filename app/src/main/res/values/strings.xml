@@ -12,4 +12,7 @@
     <string name="save">保存</string>
     <string name="cancel">取消</string>
     <string name="add_harmonic">新建谐波</string>
+    <string name="waveform_name_hint">波形名称</string>
+    <string name="fundamental_amp">基波振幅</string>
+    <string name="harmonics">谐波</string>
 </resources>
