@@ -1,8 +1,5 @@
 package com.yourapp.oscillator.ui;
 
-import android.app.Dialog;
-import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -28,7 +25,7 @@ public class CustomWaveformDialog extends BottomSheetDialogFragment {
     private SeekBar sbFundamental;
     private TextView tvFundamentalValue;
     private LinearLayout harmonicsContainer;
-    private List<HarmonicView> harmonicViews = new ArrayList<>();
+    private List<View> harmonicViews = new ArrayList<>();
     private double[] harmonicAmps = new double[MAX_HARMONIC];
     private AudioEngine audioEngine;
     private OnWaveformSaveListener listener;
@@ -64,21 +61,17 @@ public class CustomWaveformDialog extends BottomSheetDialogFragment {
 
         // 初始化数组（默认正弦波）
         for (int i = 0; i < MAX_HARMONIC; i++) harmonicAmps[i] = 0.0;
-        harmonicAmps[0] = 1.0; // 基波
+        harmonicAmps[0] = 1.0;
 
-        // 添加基波谐波条目（1次谐波，不可删除）
+        // 添加基波（不可删除）
         addHarmonicView(1, 100, false);
         sbFundamental.setProgress(80);
         tvFundamentalValue.setText("80%");
+
         sbFundamental.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 tvFundamentalValue.setText(progress + "%");
-                if (audioEngine != null) {
-                    double amp = progress / 100.0;
-                    // 实时调整整体音量（基波振幅影响所有谐波比例）
-                    // 这里简单演示：重设自定义音色时应用
-                }
             }
             @Override public void onStartTrackingTouch(SeekBar seekBar) {}
             @Override public void onStopTrackingTouch(SeekBar seekBar) {}

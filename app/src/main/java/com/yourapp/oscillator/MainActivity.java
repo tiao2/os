@@ -12,7 +12,6 @@ import com.yourapp.oscillator.ui.CustomWaveformDialog;
 public class MainActivity extends AppCompatActivity {
     private AudioEngine audioEngine;
     private TextView tvFrequency;
-    private SeekBar sbFrequency, sbVolume;
     private Button btnPlayStop;
     private boolean isPlaying = false;
 
@@ -24,8 +23,8 @@ public class MainActivity extends AppCompatActivity {
         audioEngine = new AudioEngine();
 
         tvFrequency = findViewById(R.id.tv_frequency_value);
-        sbFrequency = findViewById(R.id.seekbar_frequency);
-        sbVolume = findViewById(R.id.seekbar_volume);
+        SeekBar sbFrequency = findViewById(R.id.seekbar_frequency);
+        SeekBar sbVolume = findViewById(R.id.seekbar_volume);
         btnPlayStop = findViewById(R.id.btn_play_stop);
 
         sbFrequency.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
