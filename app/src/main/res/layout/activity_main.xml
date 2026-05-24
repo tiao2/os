@@ -10,6 +10,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <!-- 频率数值显示 -->
         <TextView
             android:id="@+id/tv_frequency_value"
             android:layout_width="wrap_content"
@@ -20,13 +21,15 @@
             android:layout_gravity="center"
             android:textStyle="bold"/>
 
+        <!-- 频率标签 -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="频率 (Hz)"
+            android:text="@string/frequency"
             android:textColor="#AAAAAA"
             android:layout_marginTop="16dp"/>
 
+        <!-- 频率滑动条 -->
         <SeekBar
             android:id="@+id/seekbar_frequency"
             android:layout_width="match_parent"
@@ -34,13 +37,15 @@
             android:max="20000"
             android:progress="440"/>
 
+        <!-- 音量标签 -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="音量"
+            android:text="@string/volume"
             android:textColor="#AAAAAA"
             android:layout_marginTop="24dp"/>
 
+        <!-- 音量滑动条 -->
         <SeekBar
             android:id="@+id/seekbar_volume"
             android:layout_width="match_parent"
@@ -48,6 +53,7 @@
             android:max="100"
             android:progress="80"/>
 
+        <!-- 波形标签 -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -55,58 +61,73 @@
             android:textColor="#AAAAAA"
             android:layout_marginTop="24dp"/>
 
-        <GridLayout
+        <!-- 波形选择按钮区域：两行两列（你提供的部分） -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:columnCount="2"
-            android:rowCount="2"
+            android:orientation="vertical"
             android:layout_marginTop="8dp">
 
-            <Button
-                android:id="@+id/btn_sine"
-                android:text="@string/sine"
-                android:tag="0"
-                android:layout_width="0dp"
+            <!-- 第一行 -->
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_margin="4dp"
-                android:textColor="#FFFFFF"
-                android:backgroundTint="#3A3A5E" />
+                android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/btn_square"
-                android:text="@string/square"
-                android:tag="1"
-                android:layout_width="0dp"
+                <Button
+                    android:id="@+id/btn_sine"
+                    android:text="@string/sine"
+                    android:tag="0"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="4dp"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#3A3A5E" />
+
+                <Button
+                    android:id="@+id/btn_square"
+                    android:text="@string/square"
+                    android:tag="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="4dp"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#3A3A5E" />
+            </LinearLayout>
+
+            <!-- 第二行 -->
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_margin="4dp"
-                android:textColor="#FFFFFF"
-                android:backgroundTint="#3A3A5E" />
+                android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/btn_triangle"
-                android:text="@string/triangle"
-                android:tag="2"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_margin="4dp"
-                android:textColor="#FFFFFF"
-                android:backgroundTint="#3A3A5E" />
+                <Button
+                    android:id="@+id/btn_triangle"
+                    android:text="@string/triangle"
+                    android:tag="2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="4dp"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#3A3A5E" />
 
-            <Button
-                android:id="@+id/btn_sawtooth"
-                android:text="@string/sawtooth"
-                android:tag="3"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_margin="4dp"
-                android:textColor="#FFFFFF"
-                android:backgroundTint="#3A3A5E" />
-        </GridLayout>
+                <Button
+                    android:id="@+id/btn_sawtooth"
+                    android:text="@string/sawtooth"
+                    android:tag="3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="4dp"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#3A3A5E" />
+            </LinearLayout>
+        </LinearLayout>
 
+        <!-- 自定义波形按钮 -->
         <Button
             android:id="@+id/btn_custom_waveform"
             android:layout_width="match_parent"
@@ -115,6 +136,7 @@
             android:layout_marginTop="16dp"
             style="@style/SecondaryButton"/>
 
+        <!-- 播放/停止按钮 -->
         <Button
             android:id="@+id/btn_play_stop"
             android:layout_width="match_parent"
@@ -122,5 +144,6 @@
             android:text="@string/start"
             android:layout_marginTop="16dp"
             style="@style/PrimaryButton"/>
+
     </LinearLayout>
 </ScrollView>
