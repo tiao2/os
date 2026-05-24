@@ -59,28 +59,52 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:columnCount="2"
-            android:rowCount="2">
+            android:rowCount="2"
+            android:layout_marginTop="8dp">
 
             <Button
                 android:id="@+id/btn_sine"
                 android:text="@string/sine"
                 android:tag="0"
-                style="@style/WaveButton"/>
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="4dp"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#3A3A5E" />
+
             <Button
                 android:id="@+id/btn_square"
                 android:text="@string/square"
                 android:tag="1"
-                style="@style/WaveButton"/>
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="4dp"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#3A3A5E" />
+
             <Button
                 android:id="@+id/btn_triangle"
                 android:text="@string/triangle"
                 android:tag="2"
-                style="@style/WaveButton"/>
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="4dp"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#3A3A5E" />
+
             <Button
                 android:id="@+id/btn_sawtooth"
                 android:text="@string/sawtooth"
                 android:tag="3"
-                style="@style/WaveButton"/>
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="4dp"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#3A3A5E" />
         </GridLayout>
 
         <Button
